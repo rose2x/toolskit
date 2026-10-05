@@ -1,0 +1,23 @@
+<UserControl x:Class="ToolkitApp.Views.AboutView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <ScrollViewer VerticalScrollBarVisibility="Auto">
+        <StackPanel MaxWidth="700" HorizontalAlignment="Left">
+            <TextBlock Text="Tool Kit" FontSize="34" FontWeight="Light"/>
+            <TextBlock x:Name="txtVersion" Foreground="{DynamicResource AccentBrush}" FontSize="16" Margin="0,4,0,16"/>
+            <TextBlock TextWrapping="Wrap" Text="A unified interface for organising and running command-line tools: CMD, PowerShell, pwsh, WSL or any executable, with live output, parameters, favorites, admin elevation and GitHub discovery."/>
+
+            <TextBlock Text="KEYBOARD SHORTCUTS" FontWeight="Bold" FontSize="12" Foreground="{DynamicResource MutedBrush}" Margin="0,26,0,8"/>
+            <TextBlock x:Name="txtKeys" FontFamily="Consolas" LineHeight="22"/>
+
+            <TextBlock Text="DATA LOCATIONS" FontWeight="Bold" FontSize="12" Foreground="{DynamicResource MutedBrush}" Margin="0,26,0,8"/>
+            <TextBlock x:Name="txtPaths" TextWrapping="Wrap" FontFamily="Consolas" FontSize="12"/>
+
+            <StackPanel Orientation="Horizontal" Margin="0,24,0,0">
+                <Button Content="Open source on GitHub" Click="Repo_Click" Margin="0,0,10,0"/>
+                <Button Content="Open log folder" Click="Logs_Click" Style="{StaticResource SecondaryButton}"/>
+            </StackPanel>
+            <TextBlock Text="MIT License · by oscer" Foreground="{DynamicResource MutedBrush}" Margin="0,20,0,0"/>
+        </StackPanel>
+    </ScrollViewer>
+</UserControl>
