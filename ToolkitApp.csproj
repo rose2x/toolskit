@@ -19,6 +19,13 @@
     <GenerateDocumentationFile>false</GenerateDocumentationFile>
   </PropertyGroup>
 
+  <!-- WPF's implicit usings omit these three namespaces, so add them explicitly. -->
+  <ItemGroup>
+    <Using Include="System.IO" />
+    <Using Include="System.Net.Http" />
+    <Using Include="System.Threading" />
+  </ItemGroup>
+
   <ItemGroup>
     <Resource Include="icon.ico" />
   </ItemGroup>
